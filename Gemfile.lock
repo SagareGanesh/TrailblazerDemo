@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/trailblazer/trailblazer-endpoint.git
+  revision: 0c80379a4ae977aa427092aade2aa07882f9381d
+  specs:
+    trailblazer-endpoint (0.0.1)
+      dry-matcher
+
+GIT
   remote: https://github.com/trailblazer/trailblazer-rails.git
   revision: 16b8223f18230d316fdedf6678810dbf10b91500
   tag: v2.1.5
@@ -71,6 +78,17 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    cells (4.1.7)
+      declarative-builder (< 0.2.0)
+      declarative-option (< 0.2.0)
+      tilt (>= 1.4, < 3)
+      uber (< 0.2.0)
+    cells-haml (0.0.10)
+      cells (>= 4.0.1, <= 6.0.0)
+      haml (>= 4.1.0.beta.1)
+    cells-rails (0.1.0)
+      actionpack (>= 5.0)
+      cells (>= 4.1.6, < 5.0.0)
     childprocess (3.0.0)
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
@@ -95,11 +113,18 @@ GEM
       declarative-option (< 0.2.0)
       representable (>= 2.4.0, <= 3.1.0)
       uber (< 0.2.0)
+    dry-core (0.4.9)
+      concurrent-ruby (~> 1.0)
+    dry-matcher (0.8.3)
+      dry-core (>= 0.4.8)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.12.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    haml (5.1.2)
+      temple (>= 0.8.0)
+      tilt
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     io-like (0.3.1)
@@ -130,6 +155,8 @@ GEM
       method_source (~> 0.9.0)
     public_suffix (4.0.3)
     puma (3.12.2)
+    pundit (2.1.0)
+      activesupport (>= 3.0.0)
     rack (2.2.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -188,6 +215,9 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    simple_form (4.0.0)
+      actionpack (> 4)
+      activemodel (> 4)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -200,6 +230,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    temple (0.8.2)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -211,6 +242,8 @@ GEM
       trailblazer-context (>= 0.2.0, < 0.3.0)
     trailblazer-activity-dsl-linear (0.2.6)
       trailblazer-activity (>= 0.9.1, < 1.0.0)
+    trailblazer-cells (0.0.3)
+      cells (>= 4.1.0.rc1, < 5.0.0)
     trailblazer-context (0.2.0)
     trailblazer-developer (0.0.10)
       representable
@@ -251,18 +284,24 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
+  cells-haml
+  cells-rails
   chromedriver-helper
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pry
   puma (~> 3.11)
+  pundit
   rails (~> 5.2.4, >= 5.2.4.1)
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form (= 4.0.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
+  trailblazer-cells
+  trailblazer-endpoint!
   trailblazer-rails!
   turbolinks (~> 5)
   tzinfo-data

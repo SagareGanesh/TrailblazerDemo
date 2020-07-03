@@ -62,3 +62,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'trailblazer-rails', github: 'trailblazer/trailblazer-rails', tag: 'v2.1.5'
+gem "trailblazer-cells"
+gem 'trailblazer-endpoint', github: 'trailblazer/trailblazer-endpoint'
+gem "pundit"
+gem "cells-rails"
+gem "cells-haml"
+gem 'simple_form', '4.0.0'
