@@ -3,9 +3,9 @@ module Demo::Cell
     include ActionView::Helpers::FormOptionsHelper
     include SimpleForm::ActionViewExtensions::FormHelper
 
-    def form
-      @options[:form]
-    end
+    # def form
+    #   @options[:form]
+    # end
 
   end
 end
